@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Search from './search-form.jsx'
+import Query from './query-form.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -12,12 +12,10 @@ class App extends Component {
   }
 
   handleQueryChange = (event) => {
-    console.log(event)
     this.setState({wordToTest: event.target.value})
   }
 
   isPalindrome = (event) => {
-
     event.preventDefault()
     if (this.state.wordToTest !== '') {
       let reversedWord = this.state.wordToTest.split("").reverse().join('')
@@ -36,13 +34,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Search
-        handleQueryChange={this.handleQueryChange}
-        isPalindrome={this.isPalindrome}
-        state={this.state}
-        />
-        <div>
-          {this.state.palindromeAnswers}
+        <h2> PALINDROMES </h2>
+        <div className="query-container">
+          <Query
+          handleQueryChange={this.handleQueryChange}
+          isPalindrome={this.isPalindrome}
+          state={this.state}
+          />
+          <div className="query-answers">
+            {this.state.palindromeAnswers}
+          </div>
         </div>
       </div>
     );
