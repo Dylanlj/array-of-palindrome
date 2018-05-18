@@ -1,18 +1,3 @@
-.query-container {
-  position: relative;
-  top: 260px; }
-
-.query-form {
-  width: 285px;
-  height: 45px;
-  object-fit: contain;
-  font-size: 14px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.24);
-  padding-left: 10px;
-  margin: 10px; }
-
 .title {
   font-size: 60px;
   font-family: arial;
@@ -22,11 +7,21 @@
   margin-left: auto;
   margin-right: auto;
   top: 100px;
-  z-index: 1; }
+  z-index: 1;
+}
+
+.experiment {
+
+}
 
 @keyframes pGoingUp {
-  0% { }
-  100% { } }
+  0% {
+
+  }
+  100% {
+
+  }
+}
 
 .moving-title {
   position: absolute;
@@ -37,7 +32,8 @@
   left: 0px;
   right: 0px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 .vertical {
   top: 0px;
@@ -45,71 +41,79 @@
   height: 46px;
   left: 13px;
   width: 6px;
-  background-color: red; }
+  background-color: red;
+}
 
 @keyframes verticalUp {
   0% {
-    top: 500px; } }
+    top: 500px;
+  }
+}
 
 @keyframes verticalDown {
   0% {
-    top: -150px; } }
-
+    top: -150px;
+  }
+}
 .vertical.pUp {
-  animation: verticalDown 1.5s; }
-
+  animation: verticalDown 1.5s;
+}
 .vertical.lUp {
   left: 88px;
-  height: 45px;
-  animation: verticalDown 1.5s; }
-
+  height:  45px;
+  animation: verticalDown 1.5s;
+}
 .vertical.iUp {
   left: 123px;
-  animation: verticalUp 1s; }
-
+  animation: verticalUp 1s;
+}
 .vertical.nUpOne {
   left: 139px;
-  animation: verticalDown 1s; }
-
+  animation: verticalDown 1s;
+}
 .vertical.nUpTwo {
   left: 167px;
-  animation: verticalUp 0.5s; }
-
+  animation: verticalUp 0.5s;
+}
 .vertical.nUpTwo {
   left: 167px;
-  animation: verticalUp 1.5s; }
-
+  animation: verticalUp 1.5s;
+}
 .vertical.dUp {
   left: 182px;
-  animation: verticalDown 0.75s; }
-
+  animation: verticalDown 0.75s;
+}
 .vertical.rUp {
   left: 225px;
-  animation: verticalDown 1.5s; }
-
+  animation: verticalDown 1.5s;
+}
 .vertical.mUpOne {
   left: 315px;
-  animation: verticalUp 0.75s; }
-
+  animation: verticalUp 0.75s;
+}
 .vertical.mUpTwo {
   left: 350px;
-  animation: verticalDown 1s; }
-
+  animation: verticalDown 1s;
+}
 .vertical.eUp {
   left: 365px;
-  animation: verticalUp 1s; }
-
+  animation: verticalUp 1s;
+}
 .vertical.sUp {
   left: 530px;
-  animation: verticalUp 1.5s; }
+  animation: verticalUp 1.5s;
+}
 
 @keyframes horizontalLeft {
   0% {
-    left: -200px; } }
-
+    left: -200px;
+  }
+}
 @keyframes horizontalRight {
   0% {
-    left: 700px; } }
+    left: 700px;
+  }
+}
 
 .horizontal {
   position: absolute;
@@ -117,204 +121,216 @@
   left: 13px;
   width: 26px;
   background-color: red;
-  z-index: 100; }
-
+  z-index: 100;
+}
 .horizontal.pTop {
   height: 6px;
   left: 13px;
   width: 24px;
-  animation: horizontalRight 2s; }
-
-.horizontal.pBottom {
+  animation: horizontalRight 2s;
+}
+.horizontal.pBottom{
   top: 21px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.aTop {
+  animation: horizontalLeft 2s;
+}
+.horizontal.aTop{
   top: 27px;
   left: 50px;
   width: 26px;
-  animation: horizontalRight 2s; }
-
-.horizontal.lTop {
+  animation: horizontalRight 2s;
+}
+.horizontal.lTop{
   top: 39px;
   left: 90px;
   width: 26px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.dTop {
+  animation: horizontalLeft 2s;
+}
+.horizontal.dTop{
   left: 185px;
   width: 16px;
-  animation: horizontalRight 2s; }
-
-.horizontal.dBottom {
+  animation: horizontalRight 2s;
+}
+.horizontal.dBottom{
   top: 40px;
   width: 16px;
   left: 185px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.rTop {
+  animation: horizontalLeft 2s;
+}
+.horizontal.rTop{
   left: 230px;
   width: 16px;
-  animation: horizontalRight 2s; }
-
-.horizontal.rBottom {
+  animation: horizontalRight 2s;
+}
+.horizontal.rBottom{
   top: 21px;
   width: 22px;
   left: 230px;
-  animation: horizontalLeft 2s; }
 
-.horizontal.eTop {
+  animation: horizontalLeft 2s;
+}
+.horizontal.eTop{
   left: 365px;
   width: 31px;
-  animation: horizontalRight 2s; }
-
-.horizontal.eMiddle {
+  animation: horizontalRight 2s;
+}
+.horizontal.eMiddle{
   left: 365px;
   width: 31px;
   top: 21px;
-  animation: horizontalRight 2s; }
-
-.horizontal.eBottom {
+  animation: horizontalRight 2s;
+}
+.horizontal.eBottom{
   left: 365px;
   width: 31px;
   top: 40px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.oTop {
+  animation: horizontalLeft 2s;
+}
+.horizontal.oTop{
   left: -200px;
-  background-color: green; }
+background-color: green;
+}
+
 
 @keyframes diagonalALeft {
   0% {
     left: -200px;
-    top: 600px; } }
-
+    top: 600px;
+  }
+}
 @keyframes diagonalARight {
   0% {
     left: 0px;
-    top: -200px; } }
-
+    top: -200px;
+  }
+}
 @keyframes diagonalNRight {
   0% {
     left: 560px;
-    top: 700px; } }
-
+    top: 700px;
+  }
+}
 @keyframes diagonalNRight {
   0% {
     left: 560px;
-    top: 700px; } }
-
+    top: 700px;
+  }
+}
 @keyframes diagonalRRight {
   0% {
     left: 140px;
-    top: -200px; } }
-
+    top: -200px;
+  }
+}
 @keyframes diagonalMLeft {
   0% {
     left: 270px;
-    top: -200px; } }
-
+    top: -200px;
+  }
+}
 @keyframes diagonalMRight {
   0% {
     left: 160px;
-    top: 700px; } }
-
-.diagonal {
+    top: 700px;
+  }
+}
+.diagonal{
   position: absolute;
   width: 6px;
-  height: 45px;
+  height:45px;
   background-color: red;
-  top: 0px; }
-
+  top: 0px;
+}
 .diagonal.aLeft {
   left: 51px;
   transform: skew(-22deg);
-  animation: diagonalALeft 2s; }
-
+  animation: diagonalALeft 2s;
+}
 .diagonal.aRight {
   left: 69px;
   transform: skew(22deg);
-  animation: diagonalARight 1.75s; }
-
+  animation: diagonalARight 1.75s;
+}
 .diagonal.nRight {
   left: 153px;
   transform: skew(31deg);
-  animation: diagonalNRight 1.75s; }
-
+  animation: diagonalNRight 1.75s;
+}
 .diagonal.rRight {
   left: 248px;
   width: 7px;
   top: 21px;
   height: 25px;
   transform: skew(34deg);
-  animation: diagonalRRight 2s; }
-
+  animation: diagonalRRight 2s;
+}
 .diagonal.mLeft {
   left: 325px;
   transform: skew(18deg);
-  animation: diagonalMLeft 1.75s; }
-
+  animation: diagonalMLeft 1.75s;
+}
 .diagonal.mRight {
   left: 340px;
   transform: skew(-18deg);
-  animation: diagonalMRight 1.25s; }
+  animation: diagonalMRight 1.25s;
+}
+
+
 
 .circle {
   position: absolute;
   border-radius: 50%;
-  border: 6px solid red; }
-
+  border: 6px solid red;
+}
 .pRight-container {
   position: absolute;
   left: 31px;
   width: 30px;
   height: 30px;
-  overflow: hidden; }
-
+  overflow: hidden;
+}
 .circle.pRight {
   width: 16px;
   right: 15px;
   height: 15px;
-  border: 6px solid red; }
-
+  border: 6px solid red;
+}
 .circle.dRight {
   left: 176px;
   width: 30px;
   height: 36px;
-  border: 6px solid red; }
-
+  border: 6px solid red;
+}
 .rRight-container {
   position: absolute;
   left: 244px;
   width: 30px;
   height: 30px;
-  overflow: hidden; }
-
+  overflow: hidden;
+}
 .circle.rRight {
   right: 14px;
   width: 16px;
   height: 16px;
-  border: 6px solid red; }
-
+  border: 6px solid red;
+}
 .circle.oRight {
   left: 266px;
   width: 30px;
   height: 35px;
-  border: 6px solid red; }
-
+  border: 6px solid red;
+}
 .circle.sTop {
   left: 405px;
   width: 19px;
   height: 13px;
-  border: 6px solid red; }
-
+  border: 6px solid red;
+}
 .circle.sBottom {
   left: 403px;
   top: 21px;
   width: 24px;
   height: 13px;
-  border: 6px solid red; }
+  border: 6px solid red;
+}
 
-.App {
-  text-align: center;
-  width: 100%; }
+

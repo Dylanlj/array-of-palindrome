@@ -34,7 +34,57 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2> PALINDROMES </h2>
+        <div className="title"> PALINDROMES
+          <div className="experiment"/>
+        </div>
+
+        <div className="moving-title">
+
+          <div className="vertical pUp"/>
+          <div className="vertical lUp"/>
+          <div className="vertical iUp"/>
+          <div className="vertical nUpOne"/>
+          <div className="vertical nUpTwo"/>
+          <div className="vertical dUp"/>
+          <div className="vertical rUp"/>
+          <div className="vertical mUpOne"/>
+          <div className="vertical mUpTwo"/>
+          <div className="vertical eUp"/>
+          <div className="vertical sUp"/>
+
+
+          <div className="horizontal pTop"/>
+          <div className="horizontal pBottom"/>
+          <div className="horizontal aTop"/>
+          <div className="horizontal lTop"/>
+          <div className="horizontal dTop"/>
+          <div className="horizontal dBottom"/>
+          <div className="horizontal rTop"/>
+          <div className="horizontal rBottom"/>
+          <div className="horizontal oTop"/>
+          <div className="horizontal eTop"/>
+          <div className="horizontal eMiddle"/>
+          <div className="horizontal eBottom"/>
+
+          <div className="diagonal aLeft"/>
+          <div className="diagonal aRight"/>
+          <div className="diagonal nRight"/>
+          <div className="diagonal rRight"/>
+          <div className="diagonal mRight"/>
+          <div className="diagonal mLeft"/>
+
+          <div className="pRight-container">
+            <div className="circle pRight"/>
+          </div>
+          <div className="circle dRight"/>
+          <div className="rRight-container">
+            <div className="circle rRight"/>
+          </div>
+          <div className="circle oRight"/>
+          <div className="circle sTop"/>
+          <div className="circle sBottom"/>
+
+        </div>
         <div className="query-container">
           <Query
           handleQueryChange={this.handleQueryChange}
