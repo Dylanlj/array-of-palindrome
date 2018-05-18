@@ -77,6 +77,20 @@
   left: 530px;
   animation: verticalUp 1.5s; }
 
+@keyframes oCircleDown {
+  0% {
+    height: 46px;
+    top: -150px; }
+  75% {
+    height: 46px; } }
+
+.vertical.oDown {
+  top: 22px;
+  left: 302px;
+  width: 6px;
+  height: 4px;
+  animation: oCircleDown 0.6s linear; }
+
 @keyframes diagonalALeft {
   0% {
     left: -200px;
@@ -182,7 +196,7 @@
   animation: pTopDelay 1 1.8s; }
 
 .horizontal.pBottom {
-  top: 21px;
+  top: 22px;
   width: 21px;
   animation: horizontalLeft 0.5s linear; }
 
@@ -198,7 +212,7 @@
   width: 26px;
   animation: horizontalLeft 2s; }
 
-@keyframes dTopDelay {
+@keyframes delay {
   0% {
     width: 0px; }
   80% {
@@ -208,7 +222,7 @@
   left: auto;
   right: 250px;
   width: 16px;
-  animation: dTopDelay 1.75s; }
+  animation: delay 1.75s; }
 
 .horizontal.dBottom {
   top: 40px;
@@ -219,13 +233,14 @@
 .horizontal.rTop {
   left: 230px;
   width: 16px;
-  animation: horizontalRight 2s; }
+  animation: horizontalLeft 1s linear; }
 
 .horizontal.rBottom {
   top: 21px;
   width: 22px;
-  left: 230px;
-  animation: horizontalLeft 1.5s; }
+  left: auto;
+  right: 200px;
+  animation: delay 1.75s; }
 
 .horizontal.eTop {
   left: 365px;
@@ -236,7 +251,7 @@
   left: 365px;
   width: 31px;
   top: 21px;
-  animation: horizontalRight 2s; }
+  animation: horizontalRight 1.5s; }
 
 .horizontal.eBottom {
   left: 365px;
@@ -291,7 +306,7 @@
   height: 50px;
   overflow: hidden; }
 
-@keyframes dRightRotate {
+@keyframes smallRotate {
   0% {
     transform: rotate(135deg); }
   50% {
@@ -304,7 +319,7 @@
   width: 50px;
   height: 50px;
   background-color: blue;
-  animation: dRightRotate 2s linear;
+  animation: smallRotate 2s linear;
   transform-origin: right bottom;
   transform: rotate(-45deg);
   background-color: white;
@@ -317,22 +332,90 @@
   height: 34.80px;
   z-index: -3; }
 
+@keyframes rRightRotate {
+  0% {
+    transform: rotate(-45deg); } }
+
+.hide-animation.rRight {
+  position: absolute;
+  top: -16px;
+  left: 199px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: smallRotate 2s linear;
+  transform-origin: right bottom;
+  transform: rotate(315deg);
+  background-color: white;
+  z-index: -6; }
+
 .rRight-container {
   position: absolute;
   left: 244px;
   width: 30px;
   height: 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  transform-origin: left bottom; }
 
 .circle.rRight {
   right: 14px;
   width: 16px;
-  height: 16px; }
+  height: 16px;
+  z-index: -7; }
+
+@keyframes oBottomRotate {
+  0% {
+    height: 30px;
+    transform: rotate(-180deg); }
+  45% {
+    transform: rotate(-180deg); }
+  100% {
+    height: 30px; } }
+
+.hide-animation.obottom {
+  position: absolute;
+  top: -5px;
+  left: 260px;
+  width: 50px;
+  height: 0px;
+  animation: oBottomRotate 1s linear;
+  transform-origin: center bottom;
+  background-color: white;
+  z-index: -8; }
+
+@keyframes oRotateTop {
+  0% {
+    height: 30px;
+    transform: rotate(-180deg); }
+  65% {
+    transform: rotate(-180deg); }
+  100% {
+    height: 30px; } }
+
+.hide-animation.otop {
+  position: absolute;
+  width: 50px;
+  height: 28px;
+  top: 28px;
+  transfrom: rotate(90deg);
+  animation: oRotateTop 1.5s linear;
+  transform-origin: center top;
+  background-color: white;
+  z-index: -8; }
+
+.otop-container {
+  position: absolute;
+  top: -3px;
+  left: 264px;
+  width: 50px;
+  height: 28px;
+  overflow: hidden; }
 
 .circle.oRight {
   left: 266px;
   width: 30px;
-  height: 35px; }
+  height: 35px;
+  z-index: -9; }
 
 .sTop-container {
   position: absolute;

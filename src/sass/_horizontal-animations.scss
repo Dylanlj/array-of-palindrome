@@ -35,7 +35,7 @@
   animation: pTopDelay 1 1.8s;
 }
 .horizontal.pBottom{
-  top: 21px;
+  top: 22px;
   width: 21px;
   animation: horizontalLeft 0.5s linear;
 }
@@ -52,7 +52,7 @@
   animation: horizontalLeft 2s;
 }
 
-@keyframes dTopDelay {
+@keyframes delay {
   0% {
     width: 0px;
   }
@@ -64,7 +64,7 @@
   left: auto;
   right: 250px;
   width: 16px;
-  animation: dTopDelay 1.75s;
+  animation: delay 1.75s;
 }
 .horizontal.dBottom{
   top: 40px;
@@ -75,14 +75,14 @@
 .horizontal.rTop{
   left: 230px;
   width: 16px;
-  animation: horizontalRight 2s;
+  animation: horizontalLeft 1s linear;
 }
 .horizontal.rBottom{
   top: 21px;
   width: 22px;
-  left: 230px;
-
-  animation: horizontalLeft 1.5s;
+  left: auto;
+  right: 200px;
+  animation: delay 1.75s;
 }
 .horizontal.eTop{
   left: 365px;
@@ -93,7 +93,7 @@
   left: 365px;
   width: 31px;
   top: 21px;
-  animation: horizontalRight 2s;
+  animation: horizontalRight 1.5s;
 }
 .horizontal.eBottom{
   left: 365px;

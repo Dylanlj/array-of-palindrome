@@ -67,3 +67,22 @@
   left: 530px;
   animation: verticalUp 1.5s;
 }
+
+@keyframes oCircleDown {
+  0% {
+    height: 46px;
+    top: -150px;
+  }
+
+
+  75% {
+    height: 46px;
+  }
+}
+.vertical.oDown {
+  top: 22px;
+  left: 302px;
+  width: 6px;
+  height: 4px;
+  animation: oCircleDown 0.6s linear;
+}

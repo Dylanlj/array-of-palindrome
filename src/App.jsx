@@ -51,6 +51,7 @@ class App extends Component {
           <div className="vertical mUpTwo"/>
           <div className="vertical eUp"/>
           <div className="vertical sUp"/>
+          <div className="vertical oDown"/>
 
 
           <div className="horizontal pTop"/>
@@ -82,10 +83,17 @@ class App extends Component {
             <div className="circle dRight"/>
           </div>
           <div className="hide-animation dRight"/>
+
           <div className="rRight-container">
             <div className="circle rRight"/>
           </div>
+          <div className="hide-animation rRight"/>
           <div className="circle oRight"/>
+          <div className="otop-container">
+            <div className="hide-animation otop"/>
+          </div>
+          <div className="hide-animation obottom"/>
+
           <div className="sTop-container">
             <div className="circle sTop"/>
           </div>
