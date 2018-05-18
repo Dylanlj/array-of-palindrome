@@ -13,32 +13,6 @@
   padding-left: 10px;
   margin: 10px; }
 
-.title {
-  font-size: 60px;
-  font-family: arial;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  top: 100px;
-  z-index: 1; }
-
-@keyframes pGoingUp {
-  0% { }
-  100% { } }
-
-.moving-title {
-  position: absolute;
-  top: 110px;
-  width: 450px;
-  height: 70px;
-  z-index: 2;
-  left: 0px;
-  right: 0px;
-  margin-left: auto;
-  margin-right: auto; }
-
 .vertical {
   top: 0px;
   position: absolute;
@@ -102,87 +76,6 @@
 .vertical.sUp {
   left: 530px;
   animation: verticalUp 1.5s; }
-
-@keyframes horizontalLeft {
-  0% {
-    left: -200px; } }
-
-@keyframes horizontalRight {
-  0% {
-    left: 700px; } }
-
-.horizontal {
-  position: absolute;
-  height: 6px;
-  left: 13px;
-  width: 26px;
-  background-color: red;
-  z-index: 100; }
-
-.horizontal.pTop {
-  height: 6px;
-  left: 13px;
-  width: 24px;
-  animation: horizontalRight 2s; }
-
-.horizontal.pBottom {
-  top: 21px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.aTop {
-  top: 27px;
-  left: 50px;
-  width: 26px;
-  animation: horizontalRight 2s; }
-
-.horizontal.lTop {
-  top: 39px;
-  left: 90px;
-  width: 26px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.dTop {
-  left: 185px;
-  width: 16px;
-  animation: horizontalRight 2s; }
-
-.horizontal.dBottom {
-  top: 40px;
-  width: 16px;
-  left: 185px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.rTop {
-  left: 230px;
-  width: 16px;
-  animation: horizontalRight 2s; }
-
-.horizontal.rBottom {
-  top: 21px;
-  width: 22px;
-  left: 230px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.eTop {
-  left: 365px;
-  width: 31px;
-  animation: horizontalRight 2s; }
-
-.horizontal.eMiddle {
-  left: 365px;
-  width: 31px;
-  top: 21px;
-  animation: horizontalRight 2s; }
-
-.horizontal.eBottom {
-  left: 365px;
-  width: 31px;
-  top: 40px;
-  animation: horizontalLeft 2s; }
-
-.horizontal.oTop {
-  left: -200px;
-  background-color: green; }
 
 @keyframes diagonalALeft {
   0% {
@@ -259,10 +152,116 @@
   transform: skew(-18deg);
   animation: diagonalMRight 1.25s; }
 
+@keyframes horizontalLeft {
+  0% {
+    left: -200px; } }
+
+@keyframes horizontalRight {
+  0% {
+    left: 700px; } }
+
+@keyframes pTopDelay {
+  0% {
+    width: 0px; }
+  50% {
+    width: 0px; } }
+
+.horizontal {
+  position: absolute;
+  height: 6px;
+  left: 13px;
+  width: 26px;
+  background-color: red;
+  z-index: 100; }
+
+.horizontal.pTop {
+  height: 6px;
+  left: auto;
+  right: 416px;
+  width: 21px;
+  animation: pTopDelay 1 1.8s; }
+
+.horizontal.pBottom {
+  top: 21px;
+  width: 21px;
+  animation: horizontalLeft 0.5s linear; }
+
+.horizontal.aTop {
+  top: 27px;
+  left: 50px;
+  width: 26px;
+  animation: horizontalRight 2s; }
+
+.horizontal.lTop {
+  top: 39px;
+  left: 90px;
+  width: 26px;
+  animation: horizontalLeft 2s; }
+
+.horizontal.dTop {
+  left: 185px;
+  width: 16px;
+  animation: horizontalRight 2s; }
+
+.horizontal.dBottom {
+  top: 40px;
+  width: 16px;
+  left: 185px;
+  animation: horizontalLeft 2s; }
+
+.horizontal.rTop {
+  left: 230px;
+  width: 16px;
+  animation: horizontalRight 2s; }
+
+.horizontal.rBottom {
+  top: 21px;
+  width: 22px;
+  left: 230px;
+  animation: horizontalLeft 2s; }
+
+.horizontal.eTop {
+  left: 365px;
+  width: 31px;
+  animation: horizontalRight 2s; }
+
+.horizontal.eMiddle {
+  left: 365px;
+  width: 31px;
+  top: 21px;
+  animation: horizontalRight 2s; }
+
+.horizontal.eBottom {
+  left: 365px;
+  width: 31px;
+  top: 40px;
+  animation: horizontalLeft 2s; }
+
+.horizontal.oTop {
+  left: -200px;
+  background-color: green; }
+
 .circle {
   position: absolute;
   border-radius: 50%;
   border: 6px solid red; }
+
+@keyframes pRightRotate {
+  0% {
+    left: -200px; }
+  50% {
+    left: 0px;
+    transform: rotate(180deg); } }
+
+.hide-animation.pRight {
+  position: absolute;
+  top: -16.85px;
+  left: 1px;
+  height: 60px;
+  width: 60px;
+  transform-origin: left center;
+  animation: pRightRotate 1s linear;
+  overflow: hidden; }
 
 .pRight-container {
   position: absolute;
@@ -272,16 +271,16 @@
   overflow: hidden; }
 
 .circle.pRight {
-  width: 16px;
-  right: 15px;
-  height: 15px;
-  border: 6px solid red; }
+  position: relative;
+  width: 15px;
+  top: 16.75px;
+  left: -13.5px;
+  height: 15px; }
 
 .circle.dRight {
   left: 176px;
   width: 30px;
-  height: 36px;
-  border: 6px solid red; }
+  height: 36px; }
 
 .rRight-container {
   position: absolute;
@@ -293,27 +292,66 @@
 .circle.rRight {
   right: 14px;
   width: 16px;
-  height: 16px;
-  border: 6px solid red; }
+  height: 16px; }
 
 .circle.oRight {
   left: 266px;
   width: 30px;
-  height: 35px;
-  border: 6px solid red; }
+  height: 35px; }
+
+.sTop-container {
+  position: absolute;
+  top: -8.65px;
+  left: 396px;
+  width: 40px;
+  height: 30px;
+  overflow: hidden;
+  transform: rotate(-45deg); }
 
 .circle.sTop {
-  left: 405px;
+  top: 12px;
+  left: 4.5px;
   width: 19px;
   height: 13px;
-  border: 6px solid red; }
+  transform: rotate(55deg); }
+
+.sBottom-container {
+  position: absolute;
+  top: 20.5px;
+  left: 408.25px;
+  width: 40px;
+  height: 30px;
+  overflow: hidden;
+  transform: rotate(-45deg); }
 
 .circle.sBottom {
-  left: 403px;
-  top: 21px;
+  bottom: 10px;
+  right: 6px;
   width: 24px;
-  height: 13px;
-  border: 6px solid red; }
+  height: 15px;
+  transform: rotate(52deg); }
+
+.title {
+  font-size: 60px;
+  font-family: arial;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100px;
+  z-index: 1; }
+
+.moving-title {
+  position: absolute;
+  top: 110px;
+  width: 450px;
+  height: 70px;
+  z-index: 2;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .App {
   text-align: center;

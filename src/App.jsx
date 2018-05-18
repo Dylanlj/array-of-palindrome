@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="title"> PALINDROMES
+        <div className="title">
           <div className="experiment"/>
         </div>
 
@@ -74,15 +74,21 @@ class App extends Component {
           <div className="diagonal mLeft"/>
 
           <div className="pRight-container">
-            <div className="circle pRight"/>
+            <div className="hide-animation pRight">
+              <div className="circle pRight"/>
+            </div>
           </div>
           <div className="circle dRight"/>
           <div className="rRight-container">
             <div className="circle rRight"/>
           </div>
           <div className="circle oRight"/>
-          <div className="circle sTop"/>
-          <div className="circle sBottom"/>
+          <div className="sTop-container">
+            <div className="circle sTop"/>
+          </div>
+          <div className="sBottom-container">
+            <div className="circle sBottom"/>
+          </div>
 
         </div>
         <div className="query-container">

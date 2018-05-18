@@ -1,0 +1,97 @@
+
+@keyframes horizontalLeft {
+  0% {
+    left: -200px;
+  }
+}
+@keyframes horizontalRight {
+  0% {
+    left: 700px;
+  }
+}
+
+@keyframes pTopDelay {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+}
+
+.horizontal {
+  position: absolute;
+  height: 6px;
+  left: 13px;
+  width: 26px;
+  background-color: red;
+  z-index: 100;
+}
+.horizontal.pTop {
+  height: 6px;
+  left: auto;
+  right: 416px;
+  width: 21px;
+  animation: pTopDelay 1 1.8s;
+}
+.horizontal.pBottom{
+  top: 21px;
+  width: 21px;
+  animation: horizontalLeft 0.5s linear;
+}
+.horizontal.aTop{
+  top: 27px;
+  left: 50px;
+  width: 26px;
+  animation: horizontalRight 2s;
+}
+.horizontal.lTop{
+  top: 39px;
+  left: 90px;
+  width: 26px;
+  animation: horizontalLeft 2s;
+}
+.horizontal.dTop{
+  left: 185px;
+  width: 16px;
+  animation: horizontalRight 2s;
+}
+.horizontal.dBottom{
+  top: 40px;
+  width: 16px;
+  left: 185px;
+  animation: horizontalLeft 2s;
+}
+.horizontal.rTop{
+  left: 230px;
+  width: 16px;
+  animation: horizontalRight 2s;
+}
+.horizontal.rBottom{
+  top: 21px;
+  width: 22px;
+  left: 230px;
+
+  animation: horizontalLeft 2s;
+}
+.horizontal.eTop{
+  left: 365px;
+  width: 31px;
+  animation: horizontalRight 2s;
+}
+.horizontal.eMiddle{
+  left: 365px;
+  width: 31px;
+  top: 21px;
+  animation: horizontalRight 2s;
+}
+.horizontal.eBottom{
+  left: 365px;
+  width: 31px;
+  top: 40px;
+  animation: horizontalLeft 2s;
+}
+.horizontal.oTop{
+  left: -200px;
+background-color: green;
+}

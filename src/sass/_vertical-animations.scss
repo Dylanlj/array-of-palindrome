@@ -1,0 +1,69 @@
+
+.vertical {
+  top: 0px;
+  position: absolute;
+  height: 46px;
+  left: 13px;
+  width: 6px;
+  background-color: red;
+}
+
+@keyframes verticalUp {
+  0% {
+    top: 500px;
+  }
+}
+
+@keyframes verticalDown {
+  0% {
+    top: -150px;
+  }
+}
+.vertical.pUp {
+  animation: verticalDown 1.5s;
+}
+.vertical.lUp {
+  left: 88px;
+  height:  45px;
+  animation: verticalDown 1.5s;
+}
+.vertical.iUp {
+  left: 123px;
+  animation: verticalUp 1s;
+}
+.vertical.nUpOne {
+  left: 139px;
+  animation: verticalDown 1s;
+}
+.vertical.nUpTwo {
+  left: 167px;
+  animation: verticalUp 0.5s;
+}
+.vertical.nUpTwo {
+  left: 167px;
+  animation: verticalUp 1.5s;
+}
+.vertical.dUp {
+  left: 182px;
+  animation: verticalDown 0.75s;
+}
+.vertical.rUp {
+  left: 225px;
+  animation: verticalDown 1.5s;
+}
+.vertical.mUpOne {
+  left: 315px;
+  animation: verticalUp 0.75s;
+}
+.vertical.mUpTwo {
+  left: 350px;
+  animation: verticalDown 1s;
+}
+.vertical.eUp {
+  left: 365px;
+  animation: verticalUp 1s;
+}
+.vertical.sUp {
+  left: 530px;
+  animation: verticalUp 1.5s;
+}
