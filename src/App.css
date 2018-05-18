@@ -198,16 +198,23 @@
   width: 26px;
   animation: horizontalLeft 2s; }
 
+@keyframes dTopDelay {
+  0% {
+    width: 0px; }
+  80% {
+    width: 0px; } }
+
 .horizontal.dTop {
-  left: 185px;
+  left: auto;
+  right: 250px;
   width: 16px;
-  animation: horizontalRight 2s; }
+  animation: dTopDelay 1.75s; }
 
 .horizontal.dBottom {
   top: 40px;
   width: 16px;
   left: 185px;
-  animation: horizontalLeft 2s; }
+  animation: horizontalLeft 1s linear; }
 
 .horizontal.rTop {
   left: 230px;
@@ -218,7 +225,7 @@
   top: 21px;
   width: 22px;
   left: 230px;
-  animation: horizontalLeft 2s; }
+  animation: horizontalLeft 1.5s; }
 
 .horizontal.eTop {
   left: 365px;
@@ -277,10 +284,38 @@
   left: -13.5px;
   height: 15px; }
 
-.circle.dRight {
-  left: 176px;
+.dRight-container {
+  position: absolute;
+  left: 200px;
   width: 30px;
-  height: 36px; }
+  height: 50px;
+  overflow: hidden; }
+
+@keyframes dRightRotate {
+  0% {
+    transform: rotate(135deg); }
+  50% {
+    transform: rotate(135deg); } }
+
+.hide-animation.dRight {
+  position: absolute;
+  top: -28px;
+  left: 120px;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  animation: dRightRotate 2s linear;
+  transform-origin: right bottom;
+  transform: rotate(-45deg);
+  background-color: white;
+  z-index: -2; }
+
+.circle.dRight {
+  top: -0.5px;
+  right: 12px;
+  width: 30px;
+  height: 34.80px;
+  z-index: -3; }
 
 .rRight-container {
   position: absolute;

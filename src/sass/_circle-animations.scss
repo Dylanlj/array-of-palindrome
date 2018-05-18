@@ -25,10 +25,9 @@
   width: 60px;
   // background-color: blue;
   transform-origin: left center;
-  animation: pRightRotate 1s linear ;
+  animation: pRightRotate 1s linear;
   overflow: hidden;
 }
-
 .pRight-container {
   position: absolute;
   left: 31px;
@@ -44,10 +43,41 @@
   left: -13.5px;
   height: 15px;
 }
-.circle.dRight {
-  left: 176px;
+.dRight-container{
+  position: absolute;
+  left: 200px;
   width: 30px;
-  height: 36px;
+  height: 50px;
+  // background-color:green;
+  overflow: hidden;
+}
+@keyframes dRightRotate {
+  0% {
+    transform: rotate(135deg);
+  }
+  50% {
+    transform: rotate(135deg);
+  }
+}
+.hide-animation.dRight {
+  position: absolute;
+  top: -28px;
+  left: 120px;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  animation: dRightRotate 2s linear;
+  transform-origin: right bottom;
+  transform: rotate(-45deg);
+  background-color: white;
+  z-index: -2
+}
+.circle.dRight {
+  top: -0.5px;
+  right: 12px;
+  width: 30px;
+  height: 34.80px;
+  z-index: -3;
 }
 .rRight-container {
   position: absolute;

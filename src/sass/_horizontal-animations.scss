@@ -51,16 +51,26 @@
   width: 26px;
   animation: horizontalLeft 2s;
 }
+
+@keyframes dTopDelay {
+  0% {
+    width: 0px;
+  }
+  80%  {
+    width: 0px;
+  }
+}
 .horizontal.dTop{
-  left: 185px;
+  left: auto;
+  right: 250px;
   width: 16px;
-  animation: horizontalRight 2s;
+  animation: dTopDelay 1.75s;
 }
 .horizontal.dBottom{
   top: 40px;
   width: 16px;
   left: 185px;
-  animation: horizontalLeft 2s;
+  animation: horizontalLeft 1s linear;
 }
 .horizontal.rTop{
   left: 230px;
@@ -72,7 +82,7 @@
   width: 22px;
   left: 230px;
 
-  animation: horizontalLeft 2s;
+  animation: horizontalLeft 1.5s;
 }
 .horizontal.eTop{
   left: 365px;
