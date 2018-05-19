@@ -25,7 +25,7 @@
   left: 13px;
   width: 26px;
   background-color: red;
-  z-index: 100;
+  z-index: 20;
 }
 .horizontal.pTop {
   height: 6px;
@@ -100,8 +100,4 @@
   width: 31px;
   top: 40px;
   animation: horizontalLeft 2s;
-}
-.horizontal.oTop{
-  left: -200px;
-background-color: green;
 }

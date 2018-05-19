@@ -41,6 +41,18 @@
     top: 700px;
   }
 }
+@keyframes diagonalSRight {
+  0% {
+    height: 45px;
+    left: 900px;
+    top: 700px;
+  }
+  75% {
+    top: 8px;
+    left: 430px;
+    height: 45px;
+  }
+}
 .diagonal{
   position: absolute;
   width: 6px;
@@ -82,5 +94,12 @@
   animation: diagonalMRight 1.25s;
 }
 
-
+.diagonal.sRight {
+  top: 8px;
+  height: 0px;
+  left: 430px;
+  transform-origin: top;
+  transform: rotate(-41deg);
+  animation: diagonalSRight 1s linear;
+}
 

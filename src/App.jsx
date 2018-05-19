@@ -50,7 +50,6 @@ class App extends Component {
           <div className="vertical mUpOne"/>
           <div className="vertical mUpTwo"/>
           <div className="vertical eUp"/>
-          <div className="vertical sUp"/>
           <div className="vertical oDown"/>
 
 
@@ -62,7 +61,6 @@ class App extends Component {
           <div className="horizontal dBottom"/>
           <div className="horizontal rTop"/>
           <div className="horizontal rBottom"/>
-          <div className="horizontal oTop"/>
           <div className="horizontal eTop"/>
           <div className="horizontal eMiddle"/>
           <div className="horizontal eBottom"/>
@@ -73,6 +71,7 @@ class App extends Component {
           <div className="diagonal rRight"/>
           <div className="diagonal mRight"/>
           <div className="diagonal mLeft"/>
+          <div className="diagonal sRight"/>
 
           <div className="pRight-container">
             <div className="hide-animation pRight">
@@ -96,10 +95,12 @@ class App extends Component {
 
           <div className="sTop-container">
             <div className="circle sTop"/>
+            <div className="hide-animation sTop"/>
           </div>
           <div className="sBottom-container">
             <div className="circle sBottom"/>
           </div>
+          <div className="hide-animation sBottom"/>
 
         </div>
         <div className="query-container">

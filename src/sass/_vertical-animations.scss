@@ -6,6 +6,7 @@
   left: 13px;
   width: 6px;
   background-color: red;
+  z-index: 20;
 }
 
 @keyframes verticalUp {
@@ -62,10 +63,6 @@
 .vertical.eUp {
   left: 365px;
   animation: verticalUp 1s;
-}
-.vertical.sUp {
-  left: 530px;
-  animation: verticalUp 1.5s;
 }
 
 @keyframes oCircleDown {
