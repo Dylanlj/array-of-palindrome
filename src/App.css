@@ -13,6 +13,14 @@
   padding-left: 10px;
   margin: 10px; }
 
+@keyframes palindromeUp {
+  0% {
+    margin-top: 50%; } }
+
+.palindrome-answer {
+  margin-top: 10px;
+  animation: palindromeUp 2s; }
+
 .vertical {
   top: 0px;
   position: absolute;
@@ -30,47 +38,43 @@
   0% {
     top: -350px; } }
 
-.vertical.pUp {
+.vertical.p-one {
   animation: verticalDown 1.5s; }
 
-.vertical.lUp {
+.vertical.l-one {
   left: 88px;
   height: 45px;
   animation: verticalDown 1.5s; }
 
-.vertical.iUp {
+.vertical.i-one {
   left: 123px;
   animation: verticalUp 1s; }
 
-.vertical.nUpOne {
+.vertical.n-one {
   left: 139px;
   animation: verticalDown 1s; }
 
-.vertical.nUpTwo {
+.vertical.n-two {
   left: 167px;
   animation: verticalUp 0.5s; }
 
-.vertical.nUpTwo {
-  left: 167px;
-  animation: verticalUp 1.5s; }
-
-.vertical.dUp {
+.vertical.d-one {
   left: 182px;
   animation: verticalDown 0.75s; }
 
-.vertical.rUp {
+.vertical.r-one {
   left: 225px;
   animation: verticalDown 1.5s; }
 
-.vertical.mUpOne {
+.vertical.m-one {
   left: 315px;
   animation: verticalUp 0.75s; }
 
-.vertical.mUpTwo {
+.vertical.m-two {
   left: 350px;
   animation: verticalDown 1s; }
 
-.vertical.eUp {
+.vertical.e-one {
   left: 365px;
   animation: verticalUp 1s; }
 
@@ -81,7 +85,7 @@
   75% {
     height: 46px; } }
 
-.vertical.oDown {
+.vertical.o-one {
   top: 22px;
   left: 302px;
   width: 6px;
@@ -138,25 +142,26 @@
   width: 6px;
   height: 45px;
   background-color: red;
-  top: 0px; }
+  top: 0px;
+  z-index: 20; }
 
-.diagonal.aLeft {
+.diagonal.a-one {
   left: 51px;
   transform: skew(-22deg);
   animation: diagonalALeft 2s; }
 
-.diagonal.aRight {
+.diagonal.a-two {
   left: 69px;
   transform: skew(22deg);
   animation: diagonalARight 1.75s; }
 
-.diagonal.nRight {
+.diagonal.n-one {
   left: 153px;
   height: 46px;
   transform: skew(31deg);
   animation: diagonalNRight 1.75s; }
 
-.diagonal.rRight {
+.diagonal.r-one {
   left: 248px;
   width: 7px;
   top: 21px;
@@ -164,17 +169,17 @@
   transform: skew(34deg);
   animation: diagonalRRight 2s; }
 
-.diagonal.mLeft {
+.diagonal.m-one {
   left: 325px;
   transform: skew(18deg);
   animation: diagonalMLeft 1.75s; }
 
-.diagonal.mRight {
+.diagonal.m-two {
   left: 340px;
   transform: skew(-18deg);
   animation: diagonalMRight 1.25s; }
 
-.diagonal.sRight {
+.diagonal.s-one {
   top: 8px;
   height: 0px;
   left: 430px;
@@ -202,27 +207,37 @@
   left: 13px;
   width: 26px;
   background-color: red;
-  z-index: 20; }
+  z-index: 19; }
 
-.horizontal.pTop {
+.horizontal::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  box-shadow: 2px 2px 5px grey;
+  z-index: 1; }
+
+.horizontal.p-top {
   height: 6px;
   left: auto;
   right: 416px;
   width: 21px;
   animation: pTopDelay 1.25s; }
 
-.horizontal.pBottom {
+.horizontal.p-bottom {
   top: 22px;
   width: 21px;
   animation: horizontalLeft 0.5s linear; }
 
-.horizontal.aTop {
+.horizontal.a-top {
   top: 27px;
   left: 50px;
   width: 26px;
   animation: horizontalRight 2s; }
 
-.horizontal.lTop {
+.horizontal.l-top {
   top: 39px;
   left: 90px;
   width: 26px;
@@ -234,42 +249,42 @@
   80% {
     width: 0px; } }
 
-.horizontal.dTop {
+.horizontal.d-top {
   left: auto;
   right: 250px;
   width: 16px;
   animation: delay 1.75s; }
 
-.horizontal.dBottom {
+.horizontal.d-bottom {
   top: 40px;
   width: 16px;
   left: 185px;
   animation: horizontalLeft 1s linear; }
 
-.horizontal.rTop {
+.horizontal.r-top {
   left: 230px;
   width: 16px;
   animation: horizontalLeft 1s linear; }
 
-.horizontal.rBottom {
+.horizontal.r-bottom {
   top: 21px;
   width: 22px;
   left: auto;
   right: 200px;
   animation: delay 1.75s; }
 
-.horizontal.eTop {
+.horizontal.e-top {
   left: 365px;
   width: 31px;
   animation: horizontalRight 2s; }
 
-.horizontal.eMiddle {
+.horizontal.e-middle {
   left: 365px;
   width: 31px;
   top: 21px;
   animation: horizontalRight 1.5s; }
 
-.horizontal.eBottom {
+.horizontal.e-bottom {
   left: 365px;
   width: 31px;
   top: 40px;
@@ -278,7 +293,11 @@
 .circle {
   position: absolute;
   border-radius: 50%;
-  border: 6px solid red; }
+  border: 6px solid red;
+  z-index: 20; }
+
+.container {
+  z-index: 20; }
 
 @keyframes pRightRotate {
   0% {
@@ -286,7 +305,7 @@
   50% {
     transform: rotate(180deg); } }
 
-.hide-animation.pRight {
+.hide-animation.p-top {
   position: absolute;
   left: -30px;
   height: 30px;
@@ -294,24 +313,24 @@
   background-color: white;
   transform-origin: right center;
   animation: pRightRotate 0.75s linear;
-  z-index: -1; }
+  z-index: 19; }
 
-.pRight-container {
+.p-top.container {
   position: absolute;
   left: 31px;
   width: 30px;
   height: 30px;
   overflow: hidden; }
 
-.circle.pRight {
+.circle.p-top {
   position: relative;
   width: 15px;
   top: -0.45px;
   left: -13.5px;
   height: 16.5px;
-  z-index: -2; }
+  z-index: 18; }
 
-.dRight-container {
+.d-top.container {
   position: absolute;
   left: 200px;
   width: 30px;
@@ -324,7 +343,7 @@
   50% {
     transform: rotate(135deg); } }
 
-.hide-animation.dRight {
+.hide-animation.d-top {
   position: absolute;
   top: -28px;
   left: 120px;
@@ -335,20 +354,20 @@
   transform-origin: right bottom;
   transform: rotate(-45deg);
   background-color: white;
-  z-index: -2; }
+  z-index: 19; }
 
-.circle.dRight {
+.circle.d-top {
   top: -0.5px;
   right: 12px;
   width: 30px;
   height: 34.80px;
-  z-index: -3; }
+  z-index: 18; }
 
 @keyframes rRightRotate {
   0% {
     transform: rotate(-45deg); } }
 
-.hide-animation.rRight {
+.hide-animation.r-top {
   position: absolute;
   top: -16px;
   left: 199px;
@@ -361,7 +380,7 @@
   background-color: white;
   z-index: -6; }
 
-.rRight-container {
+.r-top.container {
   position: absolute;
   left: 244px;
   width: 30px;
@@ -369,7 +388,7 @@
   overflow: hidden;
   transform-origin: left bottom; }
 
-.circle.rRight {
+.circle.r-top {
   right: 14px;
   width: 16px;
   height: 16px;
@@ -384,7 +403,7 @@
   100% {
     height: 30px; } }
 
-.hide-animation.obottom {
+.hide-animation.o-bottom {
   position: absolute;
   top: -5px;
   left: 260px;
@@ -404,7 +423,7 @@
   100% {
     height: 30px; } }
 
-.hide-animation.otop {
+.hide-animation.o-top {
   position: absolute;
   width: 50px;
   height: 28px;
@@ -415,7 +434,7 @@
   background-color: white;
   z-index: -8; }
 
-.otop-container {
+.o-top.container {
   position: absolute;
   top: -3px;
   left: 264px;
@@ -423,13 +442,13 @@
   height: 28px;
   overflow: hidden; }
 
-.circle.oRight {
+.circle.o-top {
   left: 266px;
   width: 30px;
   height: 35px;
   z-index: -9; }
 
-.sTop-container {
+.s-top.container {
   position: absolute;
   top: -8.65px;
   left: 396px;
@@ -444,7 +463,7 @@
   75% {
     transform: rotate(180deg); } }
 
-.hide-animation.sTop {
+.hide-animation.s-top {
   position: absolute;
   top: 31px;
   left: -7px;
@@ -455,7 +474,7 @@
   animation: sTopRotate 1s linear;
   z-index: 4; }
 
-.circle.sTop {
+.circle.s-top {
   top: 12px;
   left: 5px;
   width: 19px;
@@ -469,7 +488,7 @@
   40% {
     transform: rotate(-225deg); } }
 
-.hide-animation.sBottom {
+.hide-animation.s-bottom {
   position: absolute;
   left: 382px;
   top: -20px;
@@ -481,7 +500,7 @@
   animation: sBottomRotate 2s ease-out;
   z-index: -2; }
 
-.sBottom-container {
+.s-bottom.container {
   position: absolute;
   top: 20.5px;
   left: 408.25px;
@@ -491,7 +510,7 @@
   transform: rotate(-45deg);
   z-index: -3; }
 
-.circle.sBottom {
+.circle.s-bottom {
   bottom: 10px;
   right: 6px;
   width: 24px;
@@ -520,6 +539,29 @@
   margin-left: auto;
   margin-right: auto; }
 
+.honeycomb {
+  position: fixed;
+  top: 0px;
+  object-fit: cover;
+  height: 100%;
+  width: 18%; }
+
+.honeycomb.left {
+  left: 0px; }
+
+.honeycomb.right {
+  right: 0px;
+  transform: rotate(180deg); }
+
 .App {
   text-align: center;
   width: 100%; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; } }
+
+.the-rest {
+  animation: fadeIn 3s; }

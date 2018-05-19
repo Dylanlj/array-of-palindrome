@@ -59,24 +59,25 @@
   height:45px;
   background-color: red;
   top: 0px;
+  z-index: 20;
 }
-.diagonal.aLeft {
+.diagonal.a-one {
   left: 51px;
   transform: skew(-22deg);
   animation: diagonalALeft 2s;
 }
-.diagonal.aRight {
+.diagonal.a-two {
   left: 69px;
   transform: skew(22deg);
   animation: diagonalARight 1.75s;
 }
-.diagonal.nRight {
+.diagonal.n-one {
   left: 153px;
   height: 46px;
   transform: skew(31deg);
   animation: diagonalNRight 1.75s;
 }
-.diagonal.rRight {
+.diagonal.r-one {
   left: 248px;
   width: 7px;
   top: 21px;
@@ -84,18 +85,18 @@
   transform: skew(34deg);
   animation: diagonalRRight 2s;
 }
-.diagonal.mLeft {
+.diagonal.m-one {
   left: 325px;
   transform: skew(18deg);
   animation: diagonalMLeft 1.75s;
 }
-.diagonal.mRight {
+.diagonal.m-two {
   left: 340px;
   transform: skew(-18deg);
   animation: diagonalMRight 1.25s;
 }
 
-.diagonal.sRight {
+.diagonal.s-one {
   top: 8px;
   height: 0px;
   left: 430px;

@@ -25,27 +25,38 @@
   left: 13px;
   width: 26px;
   background-color: red;
-  z-index: 20;
+  z-index: 19;
 }
-.horizontal.pTop {
+.horizontal::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  box-shadow: 2px 2px 5px grey;
+  z-index: 1;
+}
+
+.horizontal.p-top {
   height: 6px;
   left: auto;
   right: 416px;
   width: 21px;
   animation: pTopDelay 1.25s ;
 }
-.horizontal.pBottom{
+.horizontal.p-bottom {
   top: 22px;
   width: 21px;
   animation: horizontalLeft 0.5s linear;
 }
-.horizontal.aTop{
+.horizontal.a-top {
   top: 27px;
   left: 50px;
   width: 26px;
   animation: horizontalRight 2s;
 }
-.horizontal.lTop{
+.horizontal.l-top {
   top: 39px;
   left: 90px;
   width: 26px;
@@ -60,42 +71,42 @@
     width: 0px;
   }
 }
-.horizontal.dTop{
+.horizontal.d-top {
   left: auto;
   right: 250px;
   width: 16px;
   animation: delay 1.75s;
 }
-.horizontal.dBottom{
+.horizontal.d-bottom {
   top: 40px;
   width: 16px;
   left: 185px;
   animation: horizontalLeft 1s linear;
 }
-.horizontal.rTop{
+.horizontal.r-top {
   left: 230px;
   width: 16px;
   animation: horizontalLeft 1s linear;
 }
-.horizontal.rBottom{
+.horizontal.r-bottom {
   top: 21px;
   width: 22px;
   left: auto;
   right: 200px;
   animation: delay 1.75s;
 }
-.horizontal.eTop{
+.horizontal.e-top {
   left: 365px;
   width: 31px;
   animation: horizontalRight 2s;
 }
-.horizontal.eMiddle{
+.horizontal.e-middle {
   left: 365px;
   width: 31px;
   top: 21px;
   animation: horizontalRight 1.5s;
 }
-.horizontal.eBottom{
+.horizontal.e-bottom {
   left: 365px;
   width: 31px;
   top: 40px;

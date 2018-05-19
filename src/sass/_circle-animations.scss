@@ -3,6 +3,10 @@
   position: absolute;
   border-radius: 50%;
   border: 6px solid red;
+  z-index: 20;
+}
+.container {
+  z-index: 20;
 }
 
 @keyframes pRightRotate {
@@ -13,10 +17,9 @@
 
     transform: rotate(180deg);
   }
-
 }
 
-.hide-animation.pRight {
+.hide-animation.p-top {
   position: absolute;
   left: -30px;
   height: 30px;
@@ -24,9 +27,9 @@
   background-color: white;
   transform-origin: right center;
   animation: pRightRotate 0.75s linear;
-  z-index: -1
+  z-index: 19
 }
-.pRight-container {
+.p-top.container {
   position: absolute;
   left: 31px;
   width: 30px;
@@ -34,22 +37,21 @@
   // background-color:green;
   overflow: hidden;
 }
-.circle.pRight {
+.circle.p-top {
   position: relative;
   width: 15px;
   top: -0.45px;
   left: -13.5px;
   height: 16.5px;
-  z-index: -2;
+  z-index: 18;
 }
 
 
-.dRight-container{
+.d-top.container{
   position: absolute;
   left: 200px;
   width: 30px;
   height: 50px;
-  // background-color:green;
   overflow: hidden;
 }
 @keyframes smallRotate {
@@ -60,7 +62,7 @@
     transform: rotate(135deg);
   }
 }
-.hide-animation.dRight {
+.hide-animation.d-top {
   position: absolute;
   top: -28px;
   left: 120px;
@@ -71,14 +73,14 @@
   transform-origin: right bottom;
   transform: rotate(-45deg);
   background-color: white;
-  z-index: -2
+  z-index: 19
 }
-.circle.dRight {
+.circle.d-top {
   top: -0.5px;
   right: 12px;
   width: 30px;
   height: 34.80px;
-  z-index: -3;
+  z-index: 18;
 }
 
 @keyframes rRightRotate {
@@ -86,7 +88,7 @@
     transform: rotate(-45deg);
   }
 }
-.hide-animation.rRight {
+.hide-animation.r-top {
   position: absolute;
   top: -16px;
   left: 199px;
@@ -99,7 +101,7 @@
   background-color: white;
   z-index: -6
 }
-.rRight-container {
+.r-top.container {
   position: absolute;
   left: 244px;
   width: 30px;
@@ -108,7 +110,7 @@
   transform-origin: left bottom;
 
 }
-.circle.rRight {
+.circle.r-top {
   right: 14px;
   width: 16px;
   height: 16px;
@@ -126,7 +128,7 @@
     height: 30px;
   }
 }
-.hide-animation.obottom {
+.hide-animation.o-bottom {
   position: absolute;
   top: -5px;
   left: 260px;
@@ -148,7 +150,7 @@
   }
 
 }
-.hide-animation.otop {
+.hide-animation.o-top {
   position: absolute;
   width: 50px;
   height: 28px;
@@ -159,7 +161,7 @@
   background-color: white;
   z-index: -8;
 }
-.otop-container {
+.o-top.container {
   position: absolute;
   top: -3px;
   left: 264px;
@@ -170,13 +172,13 @@
 }
 
 
-.circle.oRight {
+.circle.o-top {
   left: 266px;
   width: 30px;
   height: 35px;
   z-index: -9
 }
-.sTop-container {
+.s-top.container {
   position: absolute;
   top: -8.65px;
   left: 396px;
@@ -196,7 +198,7 @@
   }
 }
 
-.hide-animation.sTop {
+.hide-animation.s-top {
   position: absolute;
   top: 31px;
   left: -7px;
@@ -207,7 +209,7 @@
   animation: sTopRotate 1s linear;
   z-index: 4;
 }
-.circle.sTop {
+.circle.s-top {
   top: 12px;
   left: 5px;
   width: 19px;
@@ -224,7 +226,7 @@
     transform: rotate(-225deg);
   }
 }
-.hide-animation.sBottom {
+.hide-animation.s-bottom {
   position: absolute;
   left: 382px;
   top: -20px;
@@ -236,7 +238,7 @@
   animation: sBottomRotate 2s ease-out;
   z-index: -2;
 }
-.sBottom-container {
+.s-bottom.container {
   position: absolute;
   top: 20.5px;
   left: 408.25px;
@@ -246,7 +248,7 @@
   transform: rotate(-45deg);
   z-index: -3;
 }
-.circle.sBottom {
+.circle.s-bottom {
   bottom: 10px;
   right: 6px;
   width: 24px;

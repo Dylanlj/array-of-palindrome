@@ -14,3 +14,15 @@
   padding-left: 10px;
   margin: 10px;
 }
+
+@keyframes palindromeUp {
+  0% {
+    margin-top: 50%;
+  }
+}
+
+.palindrome-answer {
+  margin-top: 10px;
+  animation: palindromeUp 2s;
+}
+

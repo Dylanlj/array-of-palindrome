@@ -1,8 +1,18 @@
-@import '_query-form.scss';
+@import '_palindrome-query.scss';
 @import '_title.scss';
+@import '_honeycomb.scss';
 
 .App {
   text-align: center;
   width: 100%;
+}
+
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  50% {opacity: 0}
+}
+.the-rest {
+  animation: fadeIn 3s;
 }
 

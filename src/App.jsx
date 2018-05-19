@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Query from './query-form.jsx'
+import Title from './title.jsx'
+import honeycomb from './images/honeycomb.jpg'
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +28,7 @@ class App extends Component {
         responsePhrase = "is not a palindrome!"
       }
       let answers = this.state.palindromeAnswers
-      answers.push(<div key={answers.length}>{this.state.wordToTest} {responsePhrase}</div>)
+      answers.push(<div key={answers.length} className="palindrome-answer">{this.state.wordToTest} {responsePhrase}</div>)
       this.setState({palindromeAnswers: answers, wordToTest: ''})
     }
   }
@@ -34,83 +36,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="title">
-          <div className="experiment"/>
-        </div>
-
-        <div className="moving-title">
-
-          <div className="vertical pUp"/>
-          <div className="vertical lUp"/>
-          <div className="vertical iUp"/>
-          <div className="vertical nUpOne"/>
-          <div className="vertical nUpTwo"/>
-          <div className="vertical dUp"/>
-          <div className="vertical rUp"/>
-          <div className="vertical mUpOne"/>
-          <div className="vertical mUpTwo"/>
-          <div className="vertical eUp"/>
-          <div className="vertical oDown"/>
-
-
-          <div className="horizontal pTop"/>
-          <div className="horizontal pBottom"/>
-          <div className="horizontal aTop"/>
-          <div className="horizontal lTop"/>
-          <div className="horizontal dTop"/>
-          <div className="horizontal dBottom"/>
-          <div className="horizontal rTop"/>
-          <div className="horizontal rBottom"/>
-          <div className="horizontal eTop"/>
-          <div className="horizontal eMiddle"/>
-          <div className="horizontal eBottom"/>
-
-          <div className="diagonal aLeft"/>
-          <div className="diagonal aRight"/>
-          <div className="diagonal nRight"/>
-          <div className="diagonal rRight"/>
-          <div className="diagonal mRight"/>
-          <div className="diagonal mLeft"/>
-          <div className="diagonal sRight"/>
-
-          <div className="pRight-container">
-            <div className="hide-animation pRight"/>
-            <div className="circle pRight"/>
+        <Title/>
+        <div className="the-rest">
+          <div className="query-container">
+            <Query
+            handleQueryChange={this.handleQueryChange}
+            isPalindrome={this.isPalindrome}
+            state={this.state}
+            />
+            <div className="query-answers">
+              {this.state.palindromeAnswers}
+            </div>
           </div>
-          <div className="dRight-container">
-            <div className="circle dRight"/>
-          </div>
-          <div className="hide-animation dRight"/>
-
-          <div className="rRight-container">
-            <div className="circle rRight"/>
-          </div>
-          <div className="hide-animation rRight"/>
-          <div className="circle oRight"/>
-          <div className="otop-container">
-            <div className="hide-animation otop"/>
-          </div>
-          <div className="hide-animation obottom"/>
-
-          <div className="sTop-container">
-            <div className="circle sTop"/>
-            <div className="hide-animation sTop"/>
-          </div>
-          <div className="sBottom-container">
-            <div className="circle sBottom"/>
-          </div>
-          <div className="hide-animation sBottom"/>
-
-        </div>
-        <div className="query-container">
-          <Query
-          handleQueryChange={this.handleQueryChange}
-          isPalindrome={this.isPalindrome}
-          state={this.state}
-          />
-          <div className="query-answers">
-            {this.state.palindromeAnswers}
-          </div>
+          <img src={honeycomb} className="honeycomb left" alt="honeycomb"/>
+          <img src={honeycomb} className="honeycomb right" alt="honeycomb"/>
         </div>
       </div>
     );

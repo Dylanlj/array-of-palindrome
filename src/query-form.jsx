@@ -4,7 +4,7 @@ class Query extends Component  {
   render () {
     return (
         <form  onSubmit={this.props.isPalindrome}>
-          <input type="text" className="query-form" onChange={this.props.handleQueryChange} value={this.props.state.wordToTest}/>
+          <input type="text" placeholder="Check if a word is a palindrome" className="query-form" onChange={this.props.handleQueryChange} value={this.props.state.wordToTest}/>
         </form>
     )
   }
