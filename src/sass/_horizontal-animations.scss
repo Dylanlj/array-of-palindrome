@@ -1,12 +1,12 @@
 
 @keyframes horizontalLeft {
   0% {
-    left: -200px;
+    left: -100%;
   }
 }
 @keyframes horizontalRight {
   0% {
-    left: 700px;
+    left: 210%;
   }
 }
 
@@ -14,7 +14,7 @@
   0% {
     width: 0px;
   }
-  50% {
+  55% {
     width: 0px;
   }
 }
@@ -32,7 +32,7 @@
   left: auto;
   right: 416px;
   width: 21px;
-  animation: pTopDelay 1 1.8s;
+  animation: pTopDelay 1.25s ;
 }
 .horizontal.pBottom{
   top: 22px;

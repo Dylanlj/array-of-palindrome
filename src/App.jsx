@@ -74,9 +74,8 @@ class App extends Component {
           <div className="diagonal sRight"/>
 
           <div className="pRight-container">
-            <div className="hide-animation pRight">
-              <div className="circle pRight"/>
-            </div>
+            <div className="hide-animation pRight"/>
+            <div className="circle pRight"/>
           </div>
           <div className="dRight-container">
             <div className="circle dRight"/>

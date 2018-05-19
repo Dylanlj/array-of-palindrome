@@ -7,11 +7,10 @@
 
 @keyframes pRightRotate {
   0% {
-    left: -200px;
-
+    transform: rotate(180deg);
   }
   50% {
-    left: 0px;
+
     transform: rotate(180deg);
   }
 
@@ -19,14 +18,13 @@
 
 .hide-animation.pRight {
   position: absolute;
-  top: -16.85px;
-  left: 1px;
-  height: 60px;
-  width: 60px;
-  // background-color: blue;
-  transform-origin: left center;
-  animation: pRightRotate 1s linear;
-  overflow: hidden;
+  left: -30px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  transform-origin: right center;
+  animation: pRightRotate 0.75s linear;
+  z-index: -1
 }
 .pRight-container {
   position: absolute;
@@ -39,10 +37,13 @@
 .circle.pRight {
   position: relative;
   width: 15px;
-  top: 16.75px;
+  top: -0.45px;
   left: -13.5px;
-  height: 15px;
+  height: 16.5px;
+  z-index: -2;
 }
+
+
 .dRight-container{
   position: absolute;
   left: 200px;

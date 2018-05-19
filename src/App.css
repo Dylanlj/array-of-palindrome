@@ -24,11 +24,11 @@
 
 @keyframes verticalUp {
   0% {
-    top: 500px; } }
+    top: 600px; } }
 
 @keyframes verticalDown {
   0% {
-    top: -150px; } }
+    top: -350px; } }
 
 .vertical.pUp {
   animation: verticalDown 1.5s; }
@@ -152,6 +152,7 @@
 
 .diagonal.nRight {
   left: 153px;
+  height: 46px;
   transform: skew(31deg);
   animation: diagonalNRight 1.75s; }
 
@@ -183,16 +184,16 @@
 
 @keyframes horizontalLeft {
   0% {
-    left: -200px; } }
+    left: -100%; } }
 
 @keyframes horizontalRight {
   0% {
-    left: 700px; } }
+    left: 210%; } }
 
 @keyframes pTopDelay {
   0% {
     width: 0px; }
-  50% {
+  55% {
     width: 0px; } }
 
 .horizontal {
@@ -208,7 +209,7 @@
   left: auto;
   right: 416px;
   width: 21px;
-  animation: pTopDelay 1 1.8s; }
+  animation: pTopDelay 1.25s; }
 
 .horizontal.pBottom {
   top: 22px;
@@ -281,20 +282,19 @@
 
 @keyframes pRightRotate {
   0% {
-    left: -200px; }
+    transform: rotate(180deg); }
   50% {
-    left: 0px;
     transform: rotate(180deg); } }
 
 .hide-animation.pRight {
   position: absolute;
-  top: -16.85px;
-  left: 1px;
-  height: 60px;
-  width: 60px;
-  transform-origin: left center;
-  animation: pRightRotate 1s linear;
-  overflow: hidden; }
+  left: -30px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  transform-origin: right center;
+  animation: pRightRotate 0.75s linear;
+  z-index: -1; }
 
 .pRight-container {
   position: absolute;
@@ -306,9 +306,10 @@
 .circle.pRight {
   position: relative;
   width: 15px;
-  top: 16.75px;
+  top: -0.45px;
   left: -13.5px;
-  height: 15px; }
+  height: 16.5px;
+  z-index: -2; }
 
 .dRight-container {
   position: absolute;
