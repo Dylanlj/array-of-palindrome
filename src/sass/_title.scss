@@ -1,7 +1,13 @@
+$animation-color: #c11b1b;
+
+
 @import '_vertical-animations.scss';
 @import '_diagonal-animations.scss';
 @import '_horizontal-animations.scss';
 @import '_circle-animations.scss';
+
+
+
 
 .title {
   font-size: 60px;

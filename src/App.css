@@ -1,8 +1,17 @@
 .query-container {
   position: relative;
-  top: 260px; }
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 49%;
+  height: 100%;
+  box-shadow: 0 0 700px 240px white;
+  z-index: 2; }
 
 .query-form {
+  position: relative;
+  margin-top: 240px;
   width: 285px;
   height: 45px;
   object-fit: contain;
@@ -10,16 +19,29 @@
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.24);
-  padding-left: 10px;
-  margin: 10px; }
+  padding-left: 10px; }
 
 @keyframes palindromeUp {
   0% {
     margin-top: 50%; } }
 
+@keyframes palindromeTrue {
+  0% {
+    margin-top: 50%; }
+  80% {
+    margin-top: 10px;
+    transform: scale(1); }
+  90% {
+    transform: scale(1.1); } }
+
 .palindrome-answer {
   margin-top: 10px;
-  animation: palindromeUp 2s; }
+  animation: palindromeUp 2s;
+  color: grey; }
+
+.true {
+  animation: palindromeTrue 2.5s;
+  color: black; }
 
 .vertical {
   top: 0px;
@@ -27,7 +49,7 @@
   height: 46px;
   left: 13px;
   width: 6px;
-  background-color: red;
+  background-color: #c11b1b;
   z-index: 20; }
 
 @keyframes verticalUp {
@@ -92,6 +114,14 @@
   height: 4px;
   animation: oCircleDown 0.6s linear; }
 
+.diagonal {
+  position: absolute;
+  width: 6px;
+  height: 45px;
+  background-color: #c11b1b;
+  top: 0px;
+  z-index: 20; }
+
 @keyframes diagonalALeft {
   0% {
     left: -200px;
@@ -137,14 +167,6 @@
     left: 430px;
     height: 45px; } }
 
-.diagonal {
-  position: absolute;
-  width: 6px;
-  height: 45px;
-  background-color: red;
-  top: 0px;
-  z-index: 20; }
-
 .diagonal.a-one {
   left: 51px;
   transform: skew(-22deg);
@@ -187,6 +209,14 @@
   transform: rotate(-41deg);
   animation: diagonalSRight 1s linear; }
 
+.horizontal {
+  position: absolute;
+  height: 6px;
+  left: 13px;
+  width: 26px;
+  background-color: #c11b1b;
+  z-index: 19; }
+
 @keyframes horizontalLeft {
   0% {
     left: -100%; } }
@@ -200,14 +230,6 @@
     width: 0px; }
   55% {
     width: 0px; } }
-
-.horizontal {
-  position: absolute;
-  height: 6px;
-  left: 13px;
-  width: 26px;
-  background-color: red;
-  z-index: 19; }
 
 .horizontal.p-top {
   height: 6px;
@@ -283,7 +305,7 @@
 .circle {
   position: absolute;
   border-radius: 50%;
-  border: 6px solid red; }
+  border: 6px solid #c11b1b; }
 
 @keyframes pRightRotate {
   0% {
@@ -530,7 +552,7 @@
   top: 0px;
   object-fit: cover;
   height: 100%;
-  width: 18%; }
+  width: 25%; }
 
 .honeycomb.left {
   left: 0px; }
@@ -549,5 +571,8 @@
   50% {
     opacity: 0; } }
 
-.the-rest {
+.fade-in {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   animation: fadeIn 3s; }

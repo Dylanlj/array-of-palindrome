@@ -21,14 +21,13 @@ class App extends Component {
     event.preventDefault()
     if (this.state.wordToTest !== '') {
       let reversedWord = this.state.wordToTest.split("").reverse().join('')
-      let responsePhrase = ""
-      if (this.state.wordToTest === reversedWord) {
-        responsePhrase = "is a palindrome!"
-      } else {
-        responsePhrase = "is not a palindrome!"
-      }
       let answers = this.state.palindromeAnswers
-      answers.push(<div key={answers.length} className="palindrome-answer">{this.state.wordToTest} {responsePhrase}</div>)
+      if (this.state.wordToTest === reversedWord) {
+        answers.push(<div key={answers.length} className="palindrome-answer true">{this.state.wordToTest} is a palindrome!</div>)
+      } else {
+        answers.push(<div key={answers.length} className="palindrome-answer false">{this.state.wordToTest} is not a palindrome!</div>)
+      }
+
       this.setState({palindromeAnswers: answers, wordToTest: ''})
     }
   }
@@ -37,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <Title/>
-        <div className="the-rest">
+        <div className="fade-in">
           <div className="query-container">
             <Query
             handleQueryChange={this.handleQueryChange}

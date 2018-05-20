@@ -1,3 +1,11 @@
+.diagonal{
+  position: absolute;
+  width: 6px;
+  height:45px;
+  background-color: $animation-color;
+  top: 0px;
+  z-index: 20;
+}
 
 @keyframes diagonalALeft {
   0% {
@@ -53,14 +61,7 @@
     height: 45px;
   }
 }
-.diagonal{
-  position: absolute;
-  width: 6px;
-  height:45px;
-  background-color: red;
-  top: 0px;
-  z-index: 20;
-}
+
 .diagonal.a-one {
   left: 51px;
   transform: skew(-22deg);

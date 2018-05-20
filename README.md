@@ -8,3 +8,4 @@ redo p circle animation
 
 need to adjust animations so that bars come from outside of the screen on larger size screens
 set all font to arial
+blur edges of photo to blend with main part of page

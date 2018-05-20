@@ -1,3 +1,11 @@
+.horizontal {
+  position: absolute;
+  height: 6px;
+  left: 13px;
+  width: 26px;
+  background-color: $animation-color;
+  z-index: 19;
+}
 
 @keyframes horizontalLeft {
   0% {
@@ -19,14 +27,7 @@
   }
 }
 
-.horizontal {
-  position: absolute;
-  height: 6px;
-  left: 13px;
-  width: 26px;
-  background-color: red;
-  z-index: 19;
-}
+
 
 .horizontal.p-top {
   height: 6px;
