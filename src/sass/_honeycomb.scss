@@ -1,15 +1,8 @@
 .honeycomb {
   position: fixed;
+  right: 0px;
   top: 0px;
   object-fit: cover;
   height: 100%;
-  width: 25%;
-}
-
-.honeycomb.left {
-  left: 0px;
-}
-.honeycomb.right {
-  right: 0px;
-  transform: rotate(180deg);
+  width: 50%;
 }

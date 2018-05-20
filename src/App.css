@@ -1,29 +1,27 @@
 .query-container {
   position: relative;
   left: 0%;
-  right: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 49%;
+  width: 50%;
   height: 100%;
-  box-shadow: 0 0 700px 240px white;
+  box-shadow: 0 0 700px 400px white;
   z-index: 2; }
 
 .query-form {
   position: relative;
-  margin-top: 240px;
+  margin-top: 220px;
+  margin-bottom: 20px;
   width: 285px;
   height: 45px;
   object-fit: contain;
   font-size: 14px;
   border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.24);
-  padding-left: 10px; }
+  padding-left: 10px;
+  left: 5%; }
 
 @keyframes palindromeUp {
   0% {
-    margin-top: 50%; } }
+    margin-top: 100%; } }
 
 @keyframes palindromeTrue {
   0% {
@@ -35,13 +33,30 @@
     transform: scale(1.1); } }
 
 .palindrome-answer {
+  padding-top: 10px;
   margin-top: 10px;
-  animation: palindromeUp 2s;
+  margin-bottom: 10px;
+  animation: palindromeUp 1s;
   color: grey; }
 
 .true {
-  animation: palindromeTrue 2.5s;
+  animation: palindromeTrue 1.25s;
   color: black; }
+
+@keyframes dividerFadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; } }
+
+.divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0px auto 10px auto;
+  border-top: 1px solid grey;
+  width: 200px;
+  animation: dividerFadeIn 1.5s; }
 
 .vertical {
   top: 0px;
@@ -49,15 +64,17 @@
   height: 46px;
   left: 13px;
   width: 6px;
-  background-color: #c11b1b;
+  background-color: black;
   z-index: 20; }
 
 @keyframes verticalUp {
   0% {
+    height: 200px;
     top: 600px; } }
 
 @keyframes verticalDown {
   0% {
+    height: 200px;
     top: -350px; } }
 
 .vertical.p-one {
@@ -118,12 +135,13 @@
   position: absolute;
   width: 6px;
   height: 45px;
-  background-color: #c11b1b;
+  background-color: black;
   top: 0px;
   z-index: 20; }
 
 @keyframes diagonalALeft {
   0% {
+    height: 200px;
     left: -200px;
     top: 600px; } }
 
@@ -134,11 +152,13 @@
 
 @keyframes diagonalNRight {
   0% {
+    height: 200px;
     left: 560px;
     top: 700px; } }
 
 @keyframes diagonalNRight {
   0% {
+    height: 200px;
     left: 560px;
     top: 700px; } }
 
@@ -154,6 +174,7 @@
 
 @keyframes diagonalMRight {
   0% {
+    height: 200px;
     left: 160px;
     top: 700px; } }
 
@@ -214,15 +235,17 @@
   height: 6px;
   left: 13px;
   width: 26px;
-  background-color: #c11b1b;
+  background-color: black;
   z-index: 19; }
 
 @keyframes horizontalLeft {
   0% {
+    width: 60px;
     left: -100%; } }
 
 @keyframes horizontalRight {
   0% {
+    width: 100px;
     left: 210%; } }
 
 @keyframes pTopDelay {
@@ -300,12 +323,12 @@
   left: 365px;
   width: 31px;
   top: 40px;
-  animation: horizontalLeft 2s; }
+  animation: horizontalLeft 1.5s; }
 
 .circle {
   position: absolute;
   border-radius: 50%;
-  border: 6px solid #c11b1b; }
+  border: 6px solid black; }
 
 @keyframes pRightRotate {
   0% {
@@ -347,9 +370,13 @@
 
 @keyframes smallRotate {
   0% {
-    transform: rotate(135deg); }
+    transform: rotate(135deg);
+    opacity: 1; }
   50% {
-    transform: rotate(135deg); } }
+    transform: rotate(135deg);
+    opacity: 1; }
+  99% {
+    opacity: 1; } }
 
 .hide-animation.d-top {
   position: absolute;
@@ -362,6 +389,7 @@
   transform-origin: right bottom;
   transform: rotate(-45deg);
   background-color: white;
+  opacity: 0;
   z-index: 0; }
 
 .circle.d-top {
@@ -386,6 +414,7 @@
   transform-origin: right bottom;
   transform: rotate(315deg);
   background-color: white;
+  opacity: 0;
   z-index: -6; }
 
 .r-top.container {
@@ -492,9 +521,13 @@
 
 @keyframes sBottomRotate {
   0% {
-    transform: rotate(-225deg); }
+    transform: rotate(-225deg);
+    opacity: 1; }
   40% {
-    transform: rotate(-225deg); } }
+    transform: rotate(-225deg);
+    opacity: 1; }
+  99% {
+    opacity: 1; } }
 
 .hide-animation.s-bottom {
   position: absolute;
@@ -506,6 +539,7 @@
   transform: rotate(-45deg);
   background-color: white;
   animation: sBottomRotate 2s ease-out;
+  opacity: 0;
   z-index: -2; }
 
 .s-bottom.container {
@@ -525,41 +559,21 @@
   height: 15px;
   transform: rotate(57deg); }
 
-.title {
-  font-size: 60px;
-  font-family: arial;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  top: 100px;
-  z-index: 1; }
-
 .moving-title {
   position: absolute;
   top: 110px;
   width: 450px;
   height: 70px;
   z-index: 2;
-  left: 0px;
-  right: 0px;
-  margin-left: auto;
-  margin-right: auto; }
+  left: 5%; }
 
 .honeycomb {
   position: fixed;
+  right: 0px;
   top: 0px;
   object-fit: cover;
   height: 100%;
-  width: 25%; }
-
-.honeycomb.left {
-  left: 0px; }
-
-.honeycomb.right {
-  right: 0px;
-  transform: rotate(180deg); }
+  width: 50%; }
 
 .App {
   text-align: center;
@@ -575,4 +589,5 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  animation: fadeIn 3s; }
+  animation: fadeIn 3s;
+  z-index: 1; }

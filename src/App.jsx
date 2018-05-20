@@ -22,10 +22,13 @@ class App extends Component {
     if (this.state.wordToTest !== '') {
       let reversedWord = this.state.wordToTest.split("").reverse().join('')
       let answers = this.state.palindromeAnswers
+      if(answers.length > 0) {
+        answers.push(<div key={answers + "divider"} className="divider"/>)
+      }
       if (this.state.wordToTest === reversedWord) {
         answers.push(<div key={answers.length} className="palindrome-answer true">{this.state.wordToTest} is a palindrome!</div>)
       } else {
-        answers.push(<div key={answers.length} className="palindrome-answer false">{this.state.wordToTest} is not a palindrome!</div>)
+        answers.push(<div key={answers.length} className="palindrome-answer false">{this.state.wordToTest} is not a palindrome</div>)
       }
 
       this.setState({palindromeAnswers: answers, wordToTest: ''})
@@ -48,7 +51,6 @@ class App extends Component {
             </div>
           </div>
           <img src={honeycomb} className="honeycomb left" alt="honeycomb"/>
-          <img src={honeycomb} className="honeycomb right" alt="honeycomb"/>
         </div>
       </div>
     );

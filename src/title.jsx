@@ -20,7 +20,6 @@ class Title extends Component  {
     return (
       <div className="moving-title">
         {titleDivs}
-
         <div className="p-top container">
           <div className="hide-animation p-top"/>
           <div className="circle p-top"/>

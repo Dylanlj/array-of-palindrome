@@ -1,5 +1,4 @@
-$animation-color: #c11b1b;
-
+$animation-color: black;
 
 @import '_vertical-animations.scss';
 @import '_diagonal-animations.scss';
@@ -7,19 +6,26 @@ $animation-color: #c11b1b;
 @import '_circle-animations.scss';
 
 
+// @keyframes fadeInTitleShadow {
+//   0% {opacity:0}
+//   65% {opacity: 0}
+// }
 
-
-.title {
-  font-size: 60px;
-  font-family: arial;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  top: 100px;
-  z-index: 1;
-}
+// .title {
+//   font-size: 60px;
+//   font-family: arial;
+//   position: absolute;
+//   left: 0px;
+//   right: 0px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   top: -10px;
+//   z-index: -20;
+//   opacity: 1;
+//   color: grey;
+//   text-shadow: 2px 2px 3px  grey;
+//   animation: fadeInTitleShadow 3s;
+// }
 
 
 .moving-title {
@@ -28,11 +34,9 @@ $animation-color: #c11b1b;
   width: 450px;
   height: 70px;
   z-index: 2;
-  left: 0px;
-  right: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  left: 5%;
 }
+
 
 
 

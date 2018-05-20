@@ -1,3 +1,4 @@
+$leftmost-position: 88px;
 
 .vertical {
   top: 0px;
@@ -11,12 +12,14 @@
 
 @keyframes verticalUp {
   0% {
+    height: 200px;
     top: 600px;
   }
 }
 
 @keyframes verticalDown {
   0% {
+    height: 200px;
     top: -350px;
   }
 }
@@ -24,40 +27,40 @@
   animation: verticalDown 1.5s;
 }
 .vertical.l-one {
-  left: 88px;
+  left: $leftmost-position;
   height:  45px;
   animation: verticalDown 1.5s;
 }
 .vertical.i-one {
-  left: 123px;
+  left: $leftmost-position + 35;
   animation: verticalUp 1s;
 }
 .vertical.n-one {
-  left: 139px;
+  left: $leftmost-position + 51;
   animation: verticalDown 1s;
 }
 .vertical.n-two {
-  left: 167px;
+  left: $leftmost-position + 79;
   animation: verticalUp 0.5s;
 }
 .vertical.d-one {
-  left: 182px;
+  left: $leftmost-position+ 94;
   animation: verticalDown 0.75s;
 }
 .vertical.r-one {
-  left: 225px;
+  left: $leftmost-position + 137;
   animation: verticalDown 1.5s;
 }
 .vertical.m-one {
-  left: 315px;
+  left: $leftmost-position + 227;
   animation: verticalUp 0.75s;
 }
 .vertical.m-two {
-  left: 350px;
+  left: $leftmost-position + 262;
   animation: verticalDown 1s;
 }
 .vertical.e-one {
-  left: 365px;
+  left: $leftmost-position + 277;
   animation: verticalUp 1s;
 }
 
@@ -66,15 +69,13 @@
     height: 46px;
     top: -150px;
   }
-
-
   75% {
     height: 46px;
   }
 }
 .vertical.o-one {
   top: 22px;
-  left: 302px;
+  left: $leftmost-position + 214;
   width: 6px;
   height: 4px;
   animation: oCircleDown 0.6s linear;

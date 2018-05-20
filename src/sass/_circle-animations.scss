@@ -1,6 +1,4 @@
 
-
-
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -8,13 +6,11 @@
 
 }
 
-
 @keyframes pRightRotate {
   0% {
     transform: rotate(180deg);
   }
   50% {
-
     transform: rotate(180deg);
   }
 }
@@ -57,10 +53,13 @@
 @keyframes smallRotate {
   0% {
     transform: rotate(135deg);
+    opacity: 1;
   }
   50% {
     transform: rotate(135deg);
+    opacity: 1;
   }
+  99% {opacity: 1}
 }
 .hide-animation.d-top {
   position: absolute;
@@ -73,7 +72,8 @@
   transform-origin: right bottom;
   transform: rotate(-45deg);
   background-color: white;
-  z-index: 0
+  opacity:0;
+  z-index: 0;
 }
 .circle.d-top {
   top: -0.5px;
@@ -99,6 +99,7 @@
   transform-origin: right bottom;
   transform: rotate(315deg);
   background-color: white;
+  opacity: 0;
   z-index: -6
 }
 .r-top.container {
@@ -221,10 +222,13 @@
 @keyframes sBottomRotate {
   0% {
     transform: rotate(-225deg);
+    opacity: 1;
   }
   40% {
     transform: rotate(-225deg);
+    opacity: 1;
   }
+  99%{opacity: 1}
 }
 .hide-animation.s-bottom {
   position: absolute;
@@ -236,6 +240,7 @@
   transform: rotate(-45deg);
   background-color: white;
   animation: sBottomRotate 2s ease-out;
+  opacity:0;
   z-index: -2;
 }
 .s-bottom.container {

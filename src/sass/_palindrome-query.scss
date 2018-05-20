@@ -1,34 +1,29 @@
 .query-container {
   position: relative;
   left: 0%;
-  right: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 49%;
+  width: 50%;
   height: 100%;
-  box-shadow: 0 0 700px 240px white;
+  box-shadow: 0 0 700px 400px white;
   z-index: 2;
 }
 
 .query-form {
   position: relative;
-  margin-top: 240px;
+  margin-top: 220px;
+  margin-bottom: 20px;
   width: 285px;
   height: 45px;
   object-fit: contain;
   font-size: 14px;
   border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.24);
   padding-left: 10px;
+  left: 5%;
 }
 
 @keyframes palindromeUp {
-  0% {
-    margin-top: 50%;
-  }
+  0% {margin-top: 100%}
 }
-
 @keyframes palindromeTrue {
   0% {margin-top: 50%}
   80% {
@@ -39,11 +34,30 @@
 }
 
 .palindrome-answer {
+  padding-top: 10px;
   margin-top: 10px;
-  animation: palindromeUp 2s;
+  margin-bottom: 10px;
+  animation: palindromeUp 1s;
   color: grey;
 }
 .true {
-  animation: palindromeTrue 2.5s ;
+  animation: palindromeTrue 1.25s ;
   color: black;
 }
+//opacity fade in
+
+@keyframes dividerFadeIn {
+  0% {opacity: 0}
+  50% {opacity: 0}
+}
+.divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0px auto 10px auto;
+  border-top: 1px solid grey;
+  width: 200px;
+  animation: dividerFadeIn 1.5s;
+}
+
+

@@ -1,3 +1,5 @@
+$starting-height: 200px;
+
 .diagonal{
   position: absolute;
   width: 6px;
@@ -9,6 +11,7 @@
 
 @keyframes diagonalALeft {
   0% {
+    height: $starting-height;
     left: -200px;
     top: 600px;
   }
@@ -21,12 +24,14 @@
 }
 @keyframes diagonalNRight {
   0% {
+    height: $starting-height;
     left: 560px;
     top: 700px;
   }
 }
 @keyframes diagonalNRight {
   0% {
+    height: $starting-height;
     left: 560px;
     top: 700px;
   }
@@ -45,6 +50,7 @@
 }
 @keyframes diagonalMRight {
   0% {
+    height: $starting-height;
     left: 160px;
     top: 700px;
   }

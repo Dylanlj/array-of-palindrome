@@ -1,3 +1,4 @@
+
 .horizontal {
   position: absolute;
   height: 6px;
@@ -9,22 +10,20 @@
 
 @keyframes horizontalLeft {
   0% {
+    width: 60px;
     left: -100%;
   }
 }
 @keyframes horizontalRight {
   0% {
+    width: 100px;
     left: 210%;
   }
 }
 
 @keyframes pTopDelay {
-  0% {
-    width: 0px;
-  }
-  55% {
-    width: 0px;
-  }
+  0% {width: 0px}
+  55% {width: 0px}
 }
 
 
@@ -101,5 +100,5 @@
   left: 365px;
   width: 31px;
   top: 40px;
-  animation: horizontalLeft 2s;
+  animation: horizontalLeft 1.5s;
 }
