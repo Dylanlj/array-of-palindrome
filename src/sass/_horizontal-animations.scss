@@ -27,16 +27,6 @@
   background-color: red;
   z-index: 19;
 }
-.horizontal::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: '';
-  box-shadow: 2px 2px 5px grey;
-  z-index: 1;
-}
 
 .horizontal.p-top {
   height: 6px;

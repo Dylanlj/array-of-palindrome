@@ -209,16 +209,6 @@
   background-color: red;
   z-index: 19; }
 
-.horizontal::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: '';
-  box-shadow: 2px 2px 5px grey;
-  z-index: 1; }
-
 .horizontal.p-top {
   height: 6px;
   left: auto;
@@ -293,11 +283,7 @@
 .circle {
   position: absolute;
   border-radius: 50%;
-  border: 6px solid red;
-  z-index: 20; }
-
-.container {
-  z-index: 20; }
+  border: 6px solid red; }
 
 @keyframes pRightRotate {
   0% {
@@ -354,14 +340,14 @@
   transform-origin: right bottom;
   transform: rotate(-45deg);
   background-color: white;
-  z-index: 19; }
+  z-index: 0; }
 
 .circle.d-top {
   top: -0.5px;
   right: 12px;
   width: 30px;
   height: 34.80px;
-  z-index: 18; }
+  z-index: -1; }
 
 @keyframes rRightRotate {
   0% {
