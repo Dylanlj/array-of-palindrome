@@ -1,6 +1,9 @@
+$query-element-position: 10%;
+
 @import '_palindrome-query.scss';
 @import '_title.scss';
 @import '_honeycomb.scss';
+@import '_style-lines.scss';
 
 .App {
   text-align: center;
@@ -10,14 +13,14 @@
 
 @keyframes fadeIn {
   0% {opacity: 0}
-  50% {opacity: 0}
+  25% {opacity: 0}
 }
 .fade-in {
   position: absolute;
   height: 100%;
   width: 100%;
   animation: fadeIn 3s;
-  z-index: 1;
+  z-index: 20;
 }
 
 

@@ -34,7 +34,7 @@ $animation-color: black;
   width: 450px;
   height: 70px;
   z-index: 2;
-  left: 5%;
+  left: $query-element-position;
 }
 
 

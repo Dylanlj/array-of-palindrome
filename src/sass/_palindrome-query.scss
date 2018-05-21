@@ -1,16 +1,29 @@
-.query-container {
+.blur-gradient {
   position: relative;
   left: 0%;
   width: 50%;
   height: 100%;
-  box-shadow: 0 0 700px 400px white;
+  // box-shadow: 0 0 700px 400px white;
   z-index: 2;
 }
 
+.query-container {
+  position: absolute;
+  left: $query-element-position + 1%;
+  top: 220px;
+  width: 100%;
+  z-index: 3;
+}
+.query-answers {
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  width: 100%;
+}
+
 .query-form {
-  position: relative;
-  margin-top: 220px;
-  margin-bottom: 20px;
+  position: absolute;
+  left: 0px;
   width: 285px;
   height: 45px;
   object-fit: contain;
@@ -18,7 +31,6 @@
   border-radius: 4px;
   background-color: #ffffff;
   padding-left: 10px;
-  left: 5%;
 }
 
 @keyframes palindromeUp {
@@ -28,17 +40,20 @@
   0% {margin-top: 50%}
   80% {
     margin-top: 10px;
-    transform: scale(1);
+    font-size: 16px;
   }
-  90% {transform: scale(1.1)}
+  90% {font-size: 18px}
 }
 
 .palindrome-answer {
+  text-align: left;
   padding-top: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   animation: palindromeUp 1s;
   color: grey;
+  width: auto;
+  // font-size: 16px;
 }
 .true {
   animation: palindromeTrue 1.25s ;
@@ -46,18 +61,15 @@
 }
 //opacity fade in
 
-@keyframes dividerFadeIn {
-  0% {opacity: 0}
-  50% {opacity: 0}
+@keyframes dividerSlideIn {
+  0% {left: 100%}
 }
 .divider {
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0px auto 10px auto;
+  left: 0%;
+  // margin: 0px auto 10px auto;
   border-top: 1px solid grey;
-  width: 200px;
-  animation: dividerFadeIn 1.5s;
+  animation: dividerSlideIn 1s;
 }
 
 

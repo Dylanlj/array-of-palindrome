@@ -1,23 +1,33 @@
-.query-container {
+.blur-gradient {
   position: relative;
   left: 0%;
   width: 50%;
   height: 100%;
-  box-shadow: 0 0 700px 400px white;
   z-index: 2; }
 
+.query-container {
+  position: absolute;
+  left: 11%;
+  top: 220px;
+  width: 100%;
+  z-index: 3; }
+
+.query-answers {
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  width: 100%; }
+
 .query-form {
-  position: relative;
-  margin-top: 220px;
-  margin-bottom: 20px;
+  position: absolute;
+  left: 0px;
   width: 285px;
   height: 45px;
   object-fit: contain;
   font-size: 14px;
   border-radius: 4px;
   background-color: #ffffff;
-  padding-left: 10px;
-  left: 5%; }
+  padding-left: 10px; }
 
 @keyframes palindromeUp {
   0% {
@@ -28,35 +38,32 @@
     margin-top: 50%; }
   80% {
     margin-top: 10px;
-    transform: scale(1); }
+    font-size: 16px; }
   90% {
-    transform: scale(1.1); } }
+    font-size: 18px; } }
 
 .palindrome-answer {
+  text-align: left;
   padding-top: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   animation: palindromeUp 1s;
-  color: grey; }
+  color: grey;
+  width: auto; }
 
 .true {
   animation: palindromeTrue 1.25s;
   color: black; }
 
-@keyframes dividerFadeIn {
+@keyframes dividerSlideIn {
   0% {
-    opacity: 0; }
-  50% {
-    opacity: 0; } }
+    left: 100%; } }
 
 .divider {
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0px auto 10px auto;
+  left: 0%;
   border-top: 1px solid grey;
-  width: 200px;
-  animation: dividerFadeIn 1.5s; }
+  animation: dividerSlideIn 1s; }
 
 .vertical {
   top: 0px;
@@ -95,7 +102,7 @@
 
 .vertical.n-two {
   left: 167px;
-  animation: verticalUp 0.5s; }
+  animation: verticalUp 1.5s; }
 
 .vertical.d-one {
   left: 182px;
@@ -565,7 +572,7 @@
   width: 450px;
   height: 70px;
   z-index: 2;
-  left: 5%; }
+  left: 10%; }
 
 .honeycomb {
   position: fixed;
@@ -573,7 +580,36 @@
   top: 0px;
   object-fit: cover;
   height: 100%;
-  width: 50%; }
+  width: 50%;
+  -webkit-mask-image: linear-gradient(to right, transparent 25%, black 140%);
+  z-index: 12; }
+
+.style-line {
+  position: absolute;
+  background-color: black;
+  z-index: 10; }
+
+@keyframes vertical-slide {
+  0% {
+    top: 100%; } }
+
+.vertical-left {
+  top: 0%;
+  left: 5%;
+  height: 100%;
+  width: 2px;
+  animation: vertical-slide 2.5s; }
+
+@keyframes horizontal-slide {
+  0% {
+    left: 100%; } }
+
+.horizontal-top {
+  left: 0%;
+  top: 50px;
+  width: 100%;
+  height: 2px;
+  animation: horizontal-slide 2.5s; }
 
 .App {
   text-align: center;
@@ -582,7 +618,7 @@
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-  50% {
+  25% {
     opacity: 0; } }
 
 .fade-in {
@@ -590,4 +626,4 @@
   height: 100%;
   width: 100%;
   animation: fadeIn 3s;
-  z-index: 1; }
+  z-index: 20; }

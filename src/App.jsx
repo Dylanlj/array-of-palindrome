@@ -9,7 +9,8 @@ class App extends Component {
     super(props)
     this.state = {
       wordToTest: '',
-      palindromeAnswers: []
+      palindromeAnswers: [],
+      lastQueryString: ''
     }
   }
 
@@ -19,19 +20,26 @@ class App extends Component {
 
   isPalindrome = (event) => {
     event.preventDefault()
-    if (this.state.wordToTest !== '') {
-      let reversedWord = this.state.wordToTest.split("").reverse().join('')
+    let newPalindrome = this.state.wordToTest.trim()
+    if (newPalindrome !== '') {
+      let reversedWord = newPalindrome.split("").reverse().join('')
       let answers = this.state.palindromeAnswers
+
+//setting divider
       if(answers.length > 0) {
-        answers.push(<div key={answers + "divider"} className="divider"/>)
+        let lastQuery = this.state.lastQueryString.length
+        let dividerStyle = {
+          width: lastQuery * 10 + 150 + "px"
+        }
+        answers.push(<div style={dividerStyle} key={answers + "divider"} className="divider"/>)
       }
-      if (this.state.wordToTest === reversedWord) {
-        answers.push(<div key={answers.length} className="palindrome-answer true">{this.state.wordToTest} is a palindrome!</div>)
+      if (newPalindrome === reversedWord) {
+        answers.push(<div key={answers.length} className="palindrome-answer true">{newPalindrome} is a palindrome!</div>)
       } else {
-        answers.push(<div key={answers.length} className="palindrome-answer false">{this.state.wordToTest} is not a palindrome</div>)
+        answers.push(<div key={answers.length} className="palindrome-answer false">{newPalindrome} is not a palindrome</div>)
       }
 
-      this.setState({palindromeAnswers: answers, wordToTest: ''})
+      this.setState({palindromeAnswers: answers, wordToTest: '', lastQueryString: newPalindrome})
     }
   }
 
@@ -39,17 +47,20 @@ class App extends Component {
     return (
       <div className="App">
         <Title/>
+        <div className="horizontal-top style-line"/>
+        <div className="vertical-left style-line"/>
         <div className="fade-in">
+          <div className="blur-gradient"/>
           <div className="query-container">
             <Query
-            handleQueryChange={this.handleQueryChange}
-            isPalindrome={this.isPalindrome}
-            state={this.state}
-            />
-            <div className="query-answers">
-              {this.state.palindromeAnswers}
+              handleQueryChange={this.handleQueryChange}
+              isPalindrome={this.isPalindrome}
+              state={this.state}
+              />
+              <div className="query-answers">
+                {this.state.palindromeAnswers}
+              </div>
             </div>
-          </div>
           <img src={honeycomb} className="honeycomb left" alt="honeycomb"/>
         </div>
       </div>

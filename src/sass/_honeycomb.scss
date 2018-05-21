@@ -1,3 +1,5 @@
+// @import '../images/honeycomb.jpg';
+
 .honeycomb {
   position: fixed;
   right: 0px;
@@ -5,4 +7,6 @@
   object-fit: cover;
   height: 100%;
   width: 50%;
+  -webkit-mask-image: linear-gradient(to right, transparent 25%, black 140%);
+  z-index: 12;
 }
