@@ -12,6 +12,9 @@ class App extends Component {
       palindromeAnswers: [],
       lastQueryString: ''
     }
+    this.isPalindrome = this.isPalindrome.bind(this);
+    this.handleQueryChange = this.handleQueryChange.bind(this);
+
   }
 
   handleQueryChange = (event) => {
