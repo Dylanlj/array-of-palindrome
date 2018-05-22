@@ -40,14 +40,14 @@
     margin-top: 10px;
     font-size: 16px; }
   90% {
-    font-size: 18px; } }
+    font-size: 17px; } }
 
 .palindrome-answer {
   text-align: left;
   padding-top: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  animation: palindromeUp 1s;
+  animation: palindromeUp 2s;
   color: grey;
   width: auto; }
 
@@ -63,7 +63,7 @@
   position: absolute;
   left: 0%;
   border-top: 1px solid grey;
-  animation: dividerSlideIn 1s; }
+  animation: dividerSlideIn 2s; }
 
 .vertical {
   top: 0px;
