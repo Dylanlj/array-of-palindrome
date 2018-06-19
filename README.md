@@ -1,7 +1,7 @@
 Palindrome App
 =====================
 
-A single page React app that allows you to test if a word or phrase is a palindrome. This was mainly a way for me to experiement with animations, and I learned a bit about react testing with react-test-renderer. Can be viewed at https://evening-shelf-32273.herokuapp.com/
+A single page React app that allows you to test if a word or phrase is a palindrome. This was mainly a way for me to experiement with animations, and I learned a bit about react testing with react-test-renderer. Can be viewed at https://array-of-palindrome.herokuapp.com/
 
 ## Screenshots
 !["Opening page"](https://github.com/Dylanlj/array-of-palindrome/blob/master/docs/single-page.png)
