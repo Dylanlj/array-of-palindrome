@@ -6,7 +6,7 @@ class Title extends Component  {
     let classNames = {
       vertical: ["p-one", "l-one", "i-one", "n-one", "n-two", "d-one", "r-one", "m-one", "m-two", "e-one", "o-one"]
       ,
-      horizontal: ["p-top", "p-bottom", "a-top", "l-top", "d-top", "d-bottom", "r-top", "r-bottom", "e-top", "e-middle", "e-bottom"]
+      horizontal: ["p-bottom", "a-top", "l-top", "d-bottom", "r-top", "e-top", "e-middle", "e-bottom"]
       ,
       diagonal: ["a-one", "a-two", "n-one", "r-one", "m-one", "m-two", "s-one"]
     }
@@ -20,6 +20,12 @@ class Title extends Component  {
     return (
       <div className="moving-title">
         {titleDivs}
+        <div className="horizontal-circle-animations">
+          <div className="horizontal p-top"/>
+          <div className="horizontal d-top"/>
+          <div className="horizontal r-bottom"/>
+        </div>
+
         <div className="p-top container">
           <div className="hide-animation p-top"/>
           <div className="circle p-top"/>
